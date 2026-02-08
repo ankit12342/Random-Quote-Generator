@@ -8,6 +8,7 @@ body{
     background-color: #ffb3c6;
     font-family: sans-serif;
     color: #e01aa5b4;
+    flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,8 +44,8 @@ body{
     transform: rotateY(180deg);
 }
 
-h1{
-    font-size: 2.4em;
+#text{
+    font-size: 2.2em;
     margin-bottom: 50px;
 }
 button{
@@ -63,5 +64,30 @@ button:hover{
     transform: scale(1.05);
 }
 
+#Shayari{
+    margin-top: 15px;
+}
 
+.main{
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: 420px;
+}
+.heading{
+    white-space: nowrap;
+    position: relative;
+    animation: moving 5s linear infinite;
+}
+@keyframes moving{
+    from{
+        left:100%;
+    }
+    to{
+        left:-100%;
+    }
+}
 

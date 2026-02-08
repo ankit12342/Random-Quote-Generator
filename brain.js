@@ -21,6 +21,29 @@ const arr=[
     `"Everything you’ve ever wanted is on the other side of fear." — George Addair`
 ];
 
+const shayari = [
+  `"खामोशी भी एक अंदाज़ है कहने का, जो लफ्ज़ कह न सकें वो महसूस कर लेती है।"`,
+  `"कुछ बातें दिल में ही रह जाती हैं, हर बात जुबां पर लाना जरूरी नहीं होता।"`,
+  `"तेरी एक मुस्कान पर हम क्या से क्या हो गए, बस देखते ही देखते तुझमें खो गए।"`,
+  `"इश्क़ वो नहीं जो दुनिया को दिखाया जाए, इश्क़ वो है जो दिल में ही निभाया जाए।"`,
+  `"हर मुलाकात अधूरी सी लगी, जब तक तेरी बातों की मिठास न मिली।"`,
+  `"दिल ने कहा उसे चाहो, दिमाग ने कहा छोड़ दो, और हम चुपचाप दिल की सुन बैठे।"`,
+  `"वो नजर जो ठहर जाए, वही मोहब्बत की पहचान है।"`,
+  `"कुछ लोग अल्फ़ाज़ नहीं होते, वो एहसास होते हैं।"`,
+  `"तेरा नाम लबों पर लाना अच्छा लगता है, भले ही तुझे खबर न हो।"`,
+  `"हमने तो बस चाहा था सुकून, पर तू ज़िंदगी की आदत बन गया।"`,
+  `"कभी कभी खामोश रहना भी मोहब्बत निभाने का तरीका होता है।"`,
+  `"तेरे बिना भी जी लेते हैं हम, मगर जीने का मज़ा नहीं आता।"`,
+  `"हर किसी को पा लेना इश्क़ नहीं, किसी के इंतज़ार में रुक जाना इश्क़ है।"`,
+  `"वो बात जो आंखों से कह दी जाए, उसे लफ्ज़ों की जरूरत नहीं होती।"`,
+  `"दिल का हाल बताने की हिम्मत नहीं हुई, बस हर बार मुस्कुरा दिए।"`,
+  `"तेरे ख्यालों में डूबना अब आदत सी बन गई है।"`,
+  `"मोहब्बत का कोई शोर नहीं होता, ये तो खामोशी में भी सुनाई देती है।"`,
+  `"हमने चाहा था तुझे पूरी शिद्दत से, बस जताने का हुनर नहीं आया।"`,
+  `"कुछ रिश्ते बिना नाम के ही सबसे गहरे होते हैं।"`,
+  `"तेरा ज़िक्र जब भी आया, दिल ने सुकून की सांस ली।"`
+];
+
 const color=["#008779","#f1b3a9","#0fc5e3","#ffb919","#a663cc"];
 
 let angle=0;
@@ -32,6 +55,18 @@ element.addEventListener('click',()=>{
    const index=Math.floor((Math.random()*20));
    const i=Math.floor((Math.random()*5));
     show.textContent=arr[index];
+    show.style.color=color[i];
+    angle += 180; // hamesha same direction
+    container.style.transform = `rotateY(${angle}deg)`;
+    first.style.transform=`rotateY(${-angle}deg)`;
+});
+
+const newelement=document.getElementById("Shayari");
+
+newelement.addEventListener('click',()=>{
+   const index=Math.floor((Math.random()*20));
+   const i=Math.floor((Math.random()*5));
+    show.textContent=shayari[index];
     show.style.color=color[i];
     angle += 180; // hamesha same direction
     container.style.transform = `rotateY(${angle}deg)`;
