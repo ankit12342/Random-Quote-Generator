@@ -68,26 +68,14 @@ button:hover{
     margin-top: 15px;
 }
 
-.main{
+.heading{
     background-color: white;
     border-radius: 10px;
     padding: 10px;
     text-align: center;
     margin-bottom: 20px;
-    overflow: hidden;
-    width: 420px;
+    box-shadow: 0px 0px 10px 10px #ff8fab;
+
 }
-.heading{
-    white-space: nowrap;
-    position: relative;
-    animation: moving 5s linear infinite;
-}
-@keyframes moving{
-    from{
-        left:100%;
-    }
-    to{
-        left:-100%;
-    }
-}
+
 
